@@ -25,3 +25,9 @@ This method takes one argument: a string. The method splits the string into an a
 
 ---
 
+## Method .pad() 
+
+This method takes two arguments: a string and a length. The method adds spaces evenly to both sides of the string to make it reach the desired length. Extra padding is added to the end of the string if an odd amount of padding is required to reach the specified length. 
+
+---
+
