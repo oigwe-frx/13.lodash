@@ -49,6 +49,17 @@ const _ = {
       return paddedString; 
     }
   },
+  
+  
+  //Has Method
+    has(object, key) {
+    if(object[key]) { 
+      return true;
+    }
+    else {
+      return false;
+    }
+  },
 };
 
 
