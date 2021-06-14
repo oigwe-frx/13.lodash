@@ -1,13 +1,17 @@
 // This object will represent our library containing all the functionality we add to it.
 const _ = { 
+  
+  //Clamp Method
   clamp(number, lower, upper) {
     const lowerClampedValue = Math.max(number, lower);
-
     const clampedValue = Math.min(lowerClampedValue, upper);
 
     return clampedValue;
   },
 
+  
+  
+  //inRange Method
   inRange(number, start, end) {
     if(!end) {
       end = start;
@@ -24,16 +28,20 @@ const _ = {
     return isInRange;
   },
 
+
+  
+  //Words Method
   words(string) {
     return string.split(' ');
   },
 
+  
+  //Pad Method  
   pad(string, length) {
     if(length <= string.length) {
       return string
     } else {
       const startPaddingLength = Math.floor((length - string.length)/2);
-
       const endPaddingLength = length - string.length - startPaddingLength;
     
       let paddedString = ' '.repeat(startPaddingLength) + string + ' '.repeat(endPaddingLength);
