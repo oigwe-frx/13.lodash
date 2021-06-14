@@ -19,15 +19,22 @@ This method takes three arguments: a number, a start value, and an end value. Th
 
 ---
 
-## Method .word()
+## Method: .word()
 
 This method takes one argument: a string. The method splits the string into an array of words.
 
 ---
 
-## Method .pad() 
+## Method: .pad() 
 
 This method takes two arguments: a string and a length. The method adds spaces evenly to both sides of the string to make it reach the desired length. Extra padding is added to the end of the string if an odd amount of padding is required to reach the specified length. 
 
 ---
+
+## Method: .has()
+
+This method takes two arguments: an object and a key, and checks to see if the provided object contains a value at the specified key.
+
+---
+
 
