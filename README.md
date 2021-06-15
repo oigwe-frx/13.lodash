@@ -64,3 +64,9 @@ This method takes two arguments: an array and a number representing the number o
 
 ---
 
+## Method: .dropWhile()
+### Used for data type: Array
+
+This method takes two arguments: an array and a predicate function. The supplied predicate function takes three arguments: the current element, the current element index, and the whole array. The method creates a new copy of the supplied array, dropping elements from the beginning of the array until an element causes the predicate function to return a falsy value.
+
+---
