@@ -70,3 +70,10 @@ This method takes two arguments: an array and a number representing the number o
 This method takes two arguments: an array and a predicate function. The supplied predicate function takes three arguments: the current element, the current element index, and the whole array. The method creates a new copy of the supplied array, dropping elements from the beginning of the array until an element causes the predicate function to return a falsy value.
 
 ---
+
+
+
+## Method: .chunk()
+### Used for data type: Array
+
+This method takes two arguments: an array and a size. The method breaks up the supplied array into arrays of the specified size. returns an array containing all of the previously-created array chunks in the order of the original array. If no size is supplied to the method, the size is set to 1
