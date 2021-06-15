@@ -91,6 +91,11 @@ const _ = {
   },
   
   
+  //Array - drop Method
+    drop(array, number=1) {
+    return array.slice(number) 
+  }, 
+  
   
 };
 
