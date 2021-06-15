@@ -41,60 +41,73 @@ const _ = {
     if(length <= string.length) {
       return string
     } else {
-      const startPaddingLength = Math.floor((length - string.length)/2);
-      const endPaddingLength = length - string.length - startPaddingLength;
+        const startPaddingLength = Math.floor((length - string.length)/2);
+        const endPaddingLength = length - string.length - startPaddingLength;
     
-      let paddedString = ' '.repeat(startPaddingLength) + string + ' '.repeat(endPaddingLength);
+        let paddedString = ' '.repeat(startPaddingLength) + string + ' '.repeat(endPaddingLength);
       
-      return paddedString; 
-    }
-  },
+        return paddedString; 
+      }
+    },
   
   
   //Object - has Method
     has(object, key) {
-    if(object[key]) { 
-      return true;
-    }
-    else {
-      return false;
-    }
-  },
+      if(object[key]) { 
+       return true;
+      } else {
+        return false;
+      }
+    },
   
   
   
   //Object - invert Method
     invert(object) {
-    const invertedObject = {};
+      const invertedObject = {};
   
-    for (let key in object) {
-      let originalValue = object[key];   
-      invertedObject[originalValue] = key;
-    }
+      for (let key in object) {
+       let originalValue = object[key];   
+        invertedObject[originalValue] = key;
+     }
 
-    return invertedObject;
-  },
+      return invertedObject;
+    },
   
   
   
   //Object - findKey Method
     findKey(object, predicate) {
-    for(let key in object) {
-      let value = object[key];
-      let predicateReturnValue = predicate(value);
+      for(let key in object) {
+        let value = object[key];
+        let predicateReturnValue = predicate(value);
 
-      if(predicateReturnValue) {
-        return key;
-      } 
-    }
-    return undefined;
-  },
+        if(predicateReturnValue) {
+          return key;
+        } 
+      }
+      return undefined;
+    },
   
   
   //Array - drop Method
     drop(array, number=1) {
-    return array.slice(number) 
-  }, 
+      return array.slice(number) 
+    }, 
+  
+  
+  
+  //Array - dropWhile Method
+    dropWhile(array, predicate) {
+      const dropNumber = array.findIndex((element, index) => {
+        return !predicate(element, index);
+    });
+
+      let droppedArray = this.drop(array, dropNumber);
+
+      return droppedArray;
+    },
+  
   
   
 };
