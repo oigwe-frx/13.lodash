@@ -50,4 +50,11 @@ This method takes one argument: an object and iterates through each key / value 
 
 ---
 
+## Method: .findKey()
+### Used for data type: Object
+
+The method takes two arguments: an object and a predicate function — a function that returns a boolean value. The method  iterates through each key / value pair in the provided object and calls the predicate function with the value. The method returns the first key that has a value that returns a truthy value from the predicate function. The method returns undefined if no values return truthy values from the predicate function.
+
+---
+
 
