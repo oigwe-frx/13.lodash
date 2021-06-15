@@ -53,8 +53,14 @@ This method takes one argument: an object and iterates through each key / value 
 ## Method: .findKey()
 ### Used for data type: Object
 
-The method takes two arguments: an object and a predicate function — a function that returns a boolean value. The method  iterates through each key / value pair in the provided object and calls the predicate function with the value. The method returns the first key that has a value that returns a truthy value from the predicate function. The method returns undefined if no values return truthy values from the predicate function.
+This method takes two arguments: an object and a predicate function — a function that returns a boolean value. The method  iterates through each key / value pair in the provided object and calls the predicate function with the value. The method returns the first key that has a value that returns a truthy value from the predicate function. The method returns undefined if no values return truthy values from the predicate function.
 
 ---
 
+## Method: .drop()
+### Used for data type: Array
+
+This method takes two arguments: an array and a number representing the number of items to drop from the beginning of the array. This method returns a new array that contains the elements from the original array, excluding the specified number of elements from the beginning of the array. If the number of elements to drop is unspecified, the method should drop one element.
+
+---
 
