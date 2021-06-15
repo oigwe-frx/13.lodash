@@ -12,8 +12,6 @@ const _ = {
     return clampedValue;
   },
 
-  
-  
   //inRange 
   inRange(number, start, end) {
     if(!end) {
@@ -39,7 +37,6 @@ const _ = {
   words(string) {
     return string.split(' ');
   },
-
   
   //pad
   pad(string, length) {
@@ -56,6 +53,7 @@ const _ = {
     },
   
   
+  
   //Object Methods
   
   //has
@@ -66,8 +64,6 @@ const _ = {
        return false;
      }
   },
-  
-  
   
   //invert
   invert(object) {
@@ -80,8 +76,6 @@ const _ = {
 
     return invertedObject;
     },
-  
-  
   
   //findKey
     findKey(object, predicate) {
@@ -97,14 +91,13 @@ const _ = {
     },
   
   
+  
   //Array Methods
   
   //drop 
     drop(array, number=1) {
       return array.slice(number) 
     }, 
-  
-  
   
   //dropWhile 
     dropWhile(array, predicate) {
@@ -117,20 +110,18 @@ const _ = {
       return droppedArray;
     },
   
-  
-  
   //chunk
     chunk(array, size = 1) {
-    let arrayChunks = [];
-    let index = 0;
+      let arrayChunks = [];
+      let index = 0;
 
-    while(index < array.length){
-      let arrayChunk = array.slice(index, index + size);
-      arrayChunks.push(arrayChunk);
-      index += size;
-    };
+      while(index < array.length){
+        let arrayChunk = array.slice(index, index + size);
+        arrayChunks.push(arrayChunk);
+        index += size;
+      };
     
-    return arrayChunks;
+      return arrayChunks;
   },
 };
 
