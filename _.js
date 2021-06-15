@@ -1,7 +1,7 @@
 // This object will represent our library containing all the functionality we add to it.
 const _ = { 
   
-  //Number - Clamp Method
+  //Number - clamp Method
   clamp(number, lower, upper) {
     const lowerClampedValue = Math.max(number, lower);
     const clampedValue = Math.min(lowerClampedValue, upper);
@@ -30,13 +30,13 @@ const _ = {
 
 
   
-  //String - Words Method
+  //String - words Method
   words(string) {
     return string.split(' ');
   },
 
   
-  //String - Pad Method  
+  //String - pad Method  
   pad(string, length) {
     if(length <= string.length) {
       return string
@@ -51,7 +51,7 @@ const _ = {
   },
   
   
-  //Object - Has Method
+  //Object - has Method
     has(object, key) {
     if(object[key]) { 
       return true;
@@ -63,7 +63,7 @@ const _ = {
   
   
   
-  //Object - Invert Method
+  //Object - invert Method
     invert(object) {
     const invertedObject = {};
   
@@ -73,6 +73,21 @@ const _ = {
     }
 
     return invertedObject;
+  },
+  
+  
+  
+  //Object - findKey Method
+    findKey(object, predicate) {
+    for(let key in object) {
+      let value = object[key];
+      let predicateReturnValue = predicate(value);
+
+      if(predicateReturnValue) {
+        return key;
+      } 
+    }
+    return undefined;
   },
   
   
