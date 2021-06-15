@@ -1,7 +1,10 @@
 // This object will represent our library containing all the functionality we add to it.
 const _ = { 
   
-  //Number - clamp Method
+  
+  //Number Methods
+  
+  //clamp
   clamp(number, lower, upper) {
     const lowerClampedValue = Math.max(number, lower);
     const clampedValue = Math.min(lowerClampedValue, upper);
@@ -11,7 +14,7 @@ const _ = {
 
   
   
-  //Number - inRange Method
+  //inRange 
   inRange(number, start, end) {
     if(!end) {
       end = start;
@@ -30,13 +33,15 @@ const _ = {
 
 
   
-  //String - words Method
+  //String Methods
+  
+  //words
   words(string) {
     return string.split(' ');
   },
 
   
-  //String - pad Method  
+  //pad
   pad(string, length) {
     if(length <= string.length) {
       return string
@@ -51,32 +56,34 @@ const _ = {
     },
   
   
-  //Object - has Method
-    has(object, key) {
-      if(object[key]) { 
-       return true;
-      } else {
-        return false;
-      }
-    },
+  //Object Methods
+  
+  //has
+  has(object, key) {
+    if(object[key]) { 
+      return true;
+    } else {
+       return false;
+     }
+  },
   
   
   
-  //Object - invert Method
-    invert(object) {
-      const invertedObject = {};
+  //invert
+  invert(object) {
+    const invertedObject = {};
   
-      for (let key in object) {
+    for (let key in object) {
        let originalValue = object[key];   
         invertedObject[originalValue] = key;
      }
 
-      return invertedObject;
+    return invertedObject;
     },
   
   
   
-  //Object - findKey Method
+  //findKey
     findKey(object, predicate) {
       for(let key in object) {
         let value = object[key];
@@ -90,14 +97,16 @@ const _ = {
     },
   
   
-  //Array - drop Method
+  //Array Methods
+  
+  //drop 
     drop(array, number=1) {
       return array.slice(number) 
     }, 
   
   
   
-  //Array - dropWhile Method
+  //dropWhile 
     dropWhile(array, predicate) {
       const dropNumber = array.findIndex((element, index) => {
         return !predicate(element, index);
@@ -110,6 +119,19 @@ const _ = {
   
   
   
+  //chunk
+    chunk(array, size = 1) {
+    let arrayChunks = [];
+    let index = 0;
+
+    while(index < array.length){
+      let arrayChunk = array.slice(index, index + size);
+      arrayChunks.push(arrayChunk);
+      index += size;
+    };
+    
+    return arrayChunks;
+  },
 };
 
 
